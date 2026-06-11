@@ -26,69 +26,72 @@
     </div>
   </nav>
 
-  <main>
-    <section class="hero">
-      <h1>SERVER-ONE</h1>
-      <p class="tagline">Athlone, Ireland</p>
-    </section>
+  <div class="page">
+    <main>
+      <section class="hero">
+        <h1>SERVER-ONE</h1>
+        <p class="tagline">Athlone, Ireland</p>
+      </section>
 
-    <section class="stats-row">
-      <div class="stat-card">
-        <div class="stat-label">LOCAL TIME</div>
-        <div class="stat-value mono" id="clock">--:--:--</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">WEATHER · ATHLONE</div>
-        <div class="stat-value mono" id="weather">Loading...</div>
-      </div>
-      <div class="stat-card player-card">
-        <div class="stat-label">NOW PLAYING</div>
-        <div class="player-body">
-          <img src="cover.jpg" alt="cover" class="player-cover" />
-          <div class="player-info">
-            <div class="player-title">Neil Vana</div>
-            <div class="player-artist">Ludvig Forssell</div>
-          </div>
-          <button class="player-btn" id="play-btn" aria-label="Play/Pause">
-            <svg id="icon-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            <svg id="icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-          </button>
+      <section class="stats-row">
+        <div class="stat-card">
+          <div class="stat-label">LOCAL TIME</div>
+          <div class="stat-value mono" id="clock">--:--:--</div>
         </div>
+        <div class="stat-card">
+          <div class="stat-label">WEATHER · ATHLONE</div>
+          <div class="stat-value mono" id="weather">Loading...</div>
+        </div>
+      </section>
+
+      <section class="services">
+        <h2>Services</h2>
+        <div class="grid">
+          <a class="card" href="https://proxmox.alex.tr" target="_blank">
+            <span class="card-icon">🖥️</span>
+            <div class="card-name">Proxmox</div>
+            <div class="card-sub">proxmox.alex.tr</div>
+          </a>
+          <a class="card" href="https://jellyfin.alex.tr" target="_blank">
+            <span class="card-icon">🎬</span>
+            <div class="card-name">Jellyfin</div>
+            <div class="card-sub">jellyfin.alex.tr</div>
+          </a>
+          <a class="card" href="https://immich.alex.tr" target="_blank">
+            <span class="card-icon">🖼️</span>
+            <div class="card-name">Immich</div>
+            <div class="card-sub">immich.alex.tr</div>
+          </a>
+          <a class="card" href="https://music.alex.tr" target="_blank">
+            <span class="card-icon">🎵</span>
+            <div class="card-name">Navidrome</div>
+            <div class="card-sub">music.alex.tr</div>
+          </a>
+          <a class="card" href="https://komga.alex.tr" target="_blank">
+            <span class="card-icon">📚</span>
+            <div class="card-name">Komga</div>
+            <div class="card-sub">komga.alex.tr</div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <div class="player">
+        <div class="stat-label">NOW PLAYING</div>
+        <div class="player-cover-wrap">
+          <img src="cover.jpg" alt="cover" class="player-cover" />
+        </div>
+        <div class="player-title">Neil Vana</div>
+        <div class="player-artist">Ludvig Forssell</div>
+        <button class="player-btn" id="play-btn" aria-label="Play/Pause">
+          <svg id="icon-play" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="icon-pause" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
         <audio id="audio" src="song.mp3" loop></audio>
       </div>
-    </section>
-
-    <section class="services">
-      <h2>Services</h2>
-      <div class="grid">
-        <a class="card" href="https://proxmox.alex.tr" target="_blank">
-          <span class="card-icon">🖥️</span>
-          <div class="card-name">Proxmox</div>
-          <div class="card-sub">proxmox.alex.tr</div>
-        </a>
-        <a class="card" href="https://jellyfin.alex.tr" target="_blank">
-          <span class="card-icon">🎬</span>
-          <div class="card-name">Jellyfin</div>
-          <div class="card-sub">jellyfin.alex.tr</div>
-        </a>
-        <a class="card" href="https://immich.alex.tr" target="_blank">
-          <span class="card-icon">🖼️</span>
-          <div class="card-name">Immich</div>
-          <div class="card-sub">immich.alex.tr</div>
-        </a>
-        <a class="card" href="https://music.alex.tr" target="_blank">
-          <span class="card-icon">🎵</span>
-          <div class="card-name">Navidrome</div>
-          <div class="card-sub">music.alex.tr</div>
-        </a>
-        <a class="card" href="https://komga.alex.tr" target="_blank">
-          <span class="card-icon">📚</span>
-          <div class="card-name">Komga</div>
-          <div class="card-sub">komga.alex.tr</div>
-        </a>
-      </div>
-    </section>
-  </main>
+    </aside>
+  </div>
 
   <script src="script.js"></script>
 </body>
