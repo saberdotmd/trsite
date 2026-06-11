@@ -23,6 +23,18 @@
       <button id="theme-toggle" aria-label="Toggle theme">
         <span id="theme-icon">☀️</span>
       </button>
+      <div class="player" id="player">
+        <img src="cover.jpg" alt="cover" class="player-cover" />
+        <div class="player-info">
+          <div class="player-title">Neil Vana</div>
+          <div class="player-artist">Ludvig Forssell</div>
+        </div>
+        <button class="player-btn" id="play-btn" aria-label="Play/Pause">
+          <svg id="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <audio id="audio" src="song.mp3" loop></audio>
+      </div>
     </div>
   </nav>
 

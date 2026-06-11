@@ -22,7 +22,23 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
-// Weather — Open-Meteo, Athlone coords
+// Player
+const audio = document.getElementById('audio');
+const playBtn = document.getElementById('play-btn');
+const iconPlay = document.getElementById('icon-play');
+const iconPause = document.getElementById('icon-pause');
+
+playBtn.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    iconPlay.style.display = 'none';
+    iconPause.style.display = '';
+  } else {
+    audio.pause();
+    iconPlay.style.display = '';
+    iconPause.style.display = 'none';
+  }
+});
 const WMO = {
   0: 'Clear', 1: 'Mainly clear', 2: 'Partly cloudy', 3: 'Overcast',
   45: 'Foggy', 48: 'Icy fog', 51: 'Light drizzle', 53: 'Drizzle', 55: 'Heavy drizzle',
